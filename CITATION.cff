@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "drinfeld-modular-polynomials: Drinfeld modular polynomials by deformation at a place"
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Breuer
+    given-names: Florian
+  - family-names: Pazuki
+    given-names: Fabien
+preferred-citation:
+  type: unpublished
+  title: "Divisibility of the coefficients of Drinfeld modular polynomials"
+  authors:
+    - family-names: Breuer
+      given-names: Florian
+    - family-names: Pazuki
+      given-names: Fabien
+  year: 2026
+  notes: "Preprint"

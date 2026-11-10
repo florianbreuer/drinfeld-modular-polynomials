@@ -1,0 +1,12 @@
+ok    test_series_ring                                       0.3s
+ok    test_level_T_against_bassa_beelen                      4.2s
+ok    test_independence_of_choices                          16.0s
+ok    test_composite_and_nonsquarefree_levels                3.1s
+ok    test_specialization_at_zero                            5.6s
+ok    test_theorem_1_2_small_cases                           1.9s
+ok    test_theorem_4_1_small_cases                           0.3s
+ok    test_reduction                                         1.2s
+ok    test_database_roundtrip                                1.2s
+ok    test_display                                           0.2s
+ok    test_input_validation                                  0.1s
+ALL TESTS PASSED  (34s)

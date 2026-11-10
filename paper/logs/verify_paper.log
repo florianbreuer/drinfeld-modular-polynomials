@@ -1,0 +1,238 @@
+Verification of the numerical claims of Breuer--Pazuki,
+"Divisibility of the coefficients of Drinfeld modular polynomials"
+loaded 20 modular polynomials from data/phi
+
+A. The data set: Phi_N(X,Y) for 20 levels (Sections 5 and 5.1)
+--------------------------------------------------------------
+   q = 2  N = T              psi =  3  height   12 <= bound   57  b_q(N) = 2.333 <= B_q = 12.500  Kronecker ok  h = q^2(q+1)
+   q = 2  N = T + 1          psi =  3  height   12 <= bound   57  b_q(N) = 2.333 <= B_q = 12.500  Kronecker ok  h = q^2(q+1)
+   q = 2  N = T^2            psi =  6  height   24 <= bound  121  b_q(N) = 1.667 <= B_q = 12.500
+   q = 2  N = T^2 + T        psi =  9  height   24 <= bound  177  b_q(N) = 1.111 <= B_q = 12.500
+   q = 2  N = T^2 + T + 1    psi =  5  height   24 <= bound  102  b_q(N) = 2.000 <= B_q = 12.500  Kronecker ok
+   q = 2  N = T^3            psi = 12  height   84 <= bound  258  b_q(N) = 2.833 <= B_q = 12.500
+   q = 2  N = T^3 + T + 1    psi =  9  height   72 <= bound  200  b_q(N) = 3.000 <= B_q = 12.500  Kronecker ok
+   q = 3  N = T              psi =  4  height   36 <= bound  149  b_q(N) = 1.750 <= B_q = 8.833  Kronecker ok  h = q^2(q+1)
+   q = 3  N = T + 1          psi =  4  height   36 <= bound  149  b_q(N) = 1.750 <= B_q = 8.833  Kronecker ok  h = q^2(q+1)
+   q = 3  N = T + 2          psi =  4  height   36 <= bound  149  b_q(N) = 1.750 <= B_q = 8.833  Kronecker ok  h = q^2(q+1)
+   q = 3  N = T^2 + T        psi = 16  height  108 <= bound  629  b_q(N) = 0.688 <= B_q = 8.833
+   q = 3  N = T^2 + 2*T + 1  psi = 12  height  108 <= bound  488  b_q(N) = 0.917 <= B_q = 8.833
+   q = 3  N = T^2 + T + 1    psi = 12  height  108 <= bound  488  b_q(N) = 0.917 <= B_q = 8.833
+   q = 3  N = T^2 + 1        psi = 10  height  108 <= bound  417  b_q(N) = 1.100 <= B_q = 8.833  Kronecker ok
+   q = 3  N = T^2 + 2        psi = 16  height  108 <= bound  629  b_q(N) = 0.688 <= B_q = 8.833
+   q = 3  N = T^2 + T + 2    psi = 10  height  108 <= bound  417  b_q(N) = 1.100 <= B_q = 8.833  Kronecker ok
+   q = 3  N = T^2 + 2*T + 2  psi = 10  height  108 <= bound  417  b_q(N) = 1.100 <= B_q = 8.833  Kronecker ok
+   q = 4  N = T              psi =  5  height   80 <= bound  315  b_q(N) = 1.533 <= B_q = 7.806  Kronecker ok  h = q^2(q+1)
+   q = 5  N = T              psi =  6  height  150 <= bound  575  b_q(N) = 1.417 <= B_q = 7.325  Kronecker ok  h = q^2(q+1)
+   q = 9  N = T              psi = 10  height  810 <= bound 2976  b_q(N) = 1.225 <= B_q = 6.642  Kronecker ok  h = q^2(q+1)
+   proven bound / true height: min 2.78 (q = 2, N = T^3 + T + 1), max 7.38 (q = 2, N = T^2 + T)
+   Phi_sigma(N)(X,Y) = a^(-psi) sigma(Phi_N)(aX, aY) verified for 58 pairs (N, sigma), sigma(T) = aT + b
+   [section A: 3s]
+
+B. Table 1: the coefficients of Phi_{T^2+T+1} for q = 2 (Section 5.2)
+---------------------------------------------------------------------
+   a_(0,0) = 0
+   a_(1,0) = 0
+   a_(1,1) = T^11 * (T + 1)^11
+   a_(2,0) = T^9 * (T + 1)^9 * (T^2 + T + 1)^3
+   a_(2,1) = T^6 * (T + 1)^6 * (T^2 + T + 1) * (T^4 + T + 1)
+   a_(2,2) = T^5 * (T + 1)^5 * (T^2 + T + 1) * (T^4 + T + 1)
+   a_(3,0) = T^6 * (T + 1)^6 * (T^2 + T + 1)^2
+   a_(3,1) = T^3 * (T + 1)^3 * (T^2 + T + 1)
+   a_(3,2) = T * (T + 1) * (T^2 + T + 1) * (T^3 + T + 1) * (T^3 + T^2 + 1)
+   a_(3,3) = T^2 * (T + 1)^2 * (T^2 + T + 1)
+   a_(4,0) = T^3 * (T + 1)^3 * (T^2 + T + 1)
+   a_(4,1) = T^2 + T + 1
+   a_(4,2) = T^2 + T + 1
+   a_(4,3) = 0
+   a_(4,4) = 1
+   a_(5,0) = 1
+   a_(5,1) = 0
+   a_(5,2) = 0
+   a_(5,3) = 0
+   a_(5,4) = 0
+   a_(5,5) = 0
+   [section B: 0s]
+
+C. Primes of degree one: Theorem 1.2(1) and optimality of q+1 (Section 5.3)
+---------------------------------------------------------------------------
+   q = 2  N = T              P = T + 1     C_0 =  3  n_opt = 3  kernels with P | S_C: 0 of 3
+   q = 2  N = T + 1          P = T         C_0 =  3  n_opt = 3  kernels with P | S_C: 0 of 3
+   q = 2  N = T^2            P = T + 1     C_0 =  6  n_opt = 3  kernels with P | S_C: 0 of 6
+   q = 2  N = T^2 + T + 1    P = T         C_0 =  5  n_opt = 3  kernels with P | S_C: 0 of 3
+   q = 2  N = T^2 + T + 1    P = T + 1     C_0 =  5  n_opt = 3  kernels with P | S_C: 0 of 3
+   q = 2  N = T^3            P = T + 1     C_0 = 12  n_opt = 3  kernels with P | S_C: 6 of 12   <-- minimum not attained at a_(0,0)
+   q = 2  N = T^3 + T + 1    P = T         C_0 =  9  n_opt = 3  kernels with P | S_C: 0 of 9
+   q = 2  N = T^3 + T + 1    P = T + 1     C_0 =  9  n_opt = 3  kernels with P | S_C: 3 of 9   <-- minimum not attained at a_(0,0)
+   q = 3  N = T              P = T + 1     C_0 =  4  n_opt = 4  kernels with P | S_C: 0 of 4
+   q = 3  N = T              P = T + 2     C_0 =  4  n_opt = 4  kernels with P | S_C: 0 of 4
+   q = 3  N = T + 1          P = T         C_0 =  4  n_opt = 4  kernels with P | S_C: 0 of 4
+   q = 3  N = T + 1          P = T + 2     C_0 =  4  n_opt = 4  kernels with P | S_C: 0 of 4
+   q = 3  N = T + 2          P = T         C_0 =  4  n_opt = 4  kernels with P | S_C: 0 of 4
+   q = 3  N = T + 2          P = T + 1     C_0 =  4  n_opt = 4  kernels with P | S_C: 0 of 4
+   q = 3  N = T^2 + T        P = T + 2     C_0 = 16  n_opt = 4  kernels with P | S_C: 0 of 16
+   q = 3  N = T^2 + 2*T + 1  P = T         C_0 = 12  n_opt = 4  kernels with P | S_C: 0 of 12
+   q = 3  N = T^2 + 2*T + 1  P = T + 2     C_0 = 12  n_opt = 4  kernels with P | S_C: 0 of 12
+   q = 3  N = T^2 + T + 1    P = T         C_0 = 12  n_opt = 4  kernels with P | S_C: 0 of 12
+   q = 3  N = T^2 + T + 1    P = T + 1     C_0 = 12  n_opt = 4  kernels with P | S_C: 0 of 12
+   q = 3  N = T^2 + 1        P = T         C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + 1        P = T + 1     C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + 1        P = T + 2     C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + 2        P = T         C_0 = 16  n_opt = 4  kernels with P | S_C: 0 of 16
+   q = 3  N = T^2 + T + 2    P = T         C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + T + 2    P = T + 1     C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + T + 2    P = T + 2     C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + 2*T + 2  P = T         C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + 2*T + 2  P = T + 1     C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 3  N = T^2 + 2*T + 2  P = T + 2     C_0 = 10  n_opt = 4  kernels with P | S_C: 0 of 8
+   q = 4  N = T              P = T + 1     C_0 =  5  n_opt = 5  kernels with P | S_C: 0 of 5
+   q = 4  N = T              P = T + y     C_0 =  5  n_opt = 5  kernels with P | S_C: 0 of 5
+   q = 4  N = T              P = T + y + 1 C_0 =  5  n_opt = 5  kernels with P | S_C: 0 of 5
+   q = 5  N = T              P = T + 1     C_0 =  6  n_opt = 6  kernels with P | S_C: 0 of 6
+   q = 5  N = T              P = T + 2     C_0 =  6  n_opt = 6  kernels with P | S_C: 0 of 6
+   q = 5  N = T              P = T + 3     C_0 =  6  n_opt = 6  kernels with P | S_C: 0 of 6
+   q = 5  N = T              P = T + 4     C_0 =  6  n_opt = 6  kernels with P | S_C: 0 of 6
+   q = 9  N = T              P = T + 1     C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   q = 9  N = T              P = T + 2     C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   q = 9  N = T              P = T + y     C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   q = 9  N = T              P = T + y + 1 C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   q = 9  N = T              P = T + y + 2 C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   q = 9  N = T              P = T + 2*y   C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   q = 9  N = T              P = T + 2*y + 1 C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   q = 9  N = T              P = T + 2*y + 2 C_0 = 10  n_opt = 10  kernels with P | S_C: 0 of 10
+   44 pairs (N,P); by q: [(2, 8), (3, 21), (4, 3), (5, 4), (9, 8)]
+   [section C: 10s]
+
+D. Primes of degree two and three (Section 5.4)
+-----------------------------------------------
+   D1. the 20 full polynomials
+   q = 2  N = T              C_0(N,0) = 0;   1 primes of degree 2: no excess;    2 primes of degree 3: no excess
+   q = 2  N = T + 1          C_0(N,0) = 0;   1 primes of degree 2: no excess;    2 primes of degree 3: no excess
+   q = 2  N = T^2            C_0(N,0) = 0;   1 primes of degree 2: no excess;    2 primes of degree 3: no excess
+   q = 2  N = T^2 + T        C_0(N,0) = 0;   1 primes of degree 2: no excess;    2 primes of degree 3: no excess
+   q = 2  N = T^2 + T + 1    C_0(N,0) = 2;   0 primes of degree 2: no excess;    2 primes of degree 3: no excess
+   q = 2  N = T^3            C_0(N,0) = 0;   1 primes of degree 2: no excess;    2 primes of degree 3: C_0(N, T^3 + T^2 + 1) = 3
+   q = 2  N = T^3 + T + 1    C_0(N,0) = 0;   1 primes of degree 2: no excess;    1 primes of degree 3: no excess
+   q = 3  N = T              C_0(N,0) = 0;   3 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T + 1          C_0(N,0) = 0;   3 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T + 2          C_0(N,0) = 0;   3 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T^2 + T        C_0(N,0) = 0;   3 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T^2 + 2*T + 1  C_0(N,0) = 0;   3 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T^2 + T + 1    C_0(N,0) = 0;   3 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T^2 + 1        C_0(N,0) = 2;   2 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T^2 + 2        C_0(N,0) = 0;   3 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T^2 + T + 2    C_0(N,0) = 2;   2 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 3  N = T^2 + 2*T + 2  C_0(N,0) = 2;   2 primes of degree 2: no excess;    8 primes of degree 3: no excess
+   q = 4  N = T              C_0(N,0) = 0;   6 primes of degree 2: no excess;   20 primes of degree 3: no excess
+   q = 5  N = T              C_0(N,0) = 0;  10 primes of degree 2: no excess;   40 primes of degree 3: no excess
+   q = 9  N = T              C_0(N,0) = 0;  36 primes of degree 2: no excess;  240 primes of degree 3: no excess
+   D2. Phi_N(X,0) for the 24 monic N of degree 3 and 4 over F_2
+   N = T^3                    psi = 12  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 3
+   N = T^3 + T^2              psi = 18  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 3, C_0(N, T^3 + T + 1) = 6
+   N = T^3 + T                psi = 18  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 6, C_0(N, T^3 + T + 1) = 3
+   N = T^3 + T^2 + T          psi = 15  C_0(N,0) = 0  C_0(N, T^3 + T + 1) = 3
+   N = T^3 + 1                psi = 15  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 3
+   N = T^3 + T^2 + 1          psi =  9  C_0(N,0) = 0  no excess at degree 3
+   N = T^3 + T + 1            psi =  9  C_0(N,0) = 0  no excess at degree 3
+   N = T^3 + T^2 + T + 1      psi = 12  C_0(N,0) = 0  C_0(N, T^3 + T + 1) = 3
+   N = T^4                    psi = 24  C_0(N,0) = 0  C_0(N, T^3 + T + 1) = 6
+   N = T^4 + T^3              psi = 36  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 9, C_0(N, T^3 + T + 1) = 6
+   N = T^4 + T^2              psi = 36  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 6, C_0(N, T^3 + T + 1) = 6
+   N = T^4 + T^3 + T^2        psi = 30  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 3
+   N = T^4 + T                psi = 45  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 6, C_0(N, T^3 + T + 1) = 6
+   N = T^4 + T^3 + T          psi = 27  C_0(N,0) = 0  C_0(N, T^3 + T + 1) = 3
+   N = T^4 + T^2 + T          psi = 27  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 6
+   N = T^4 + T^3 + T^2 + T    psi = 36  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 6, C_0(N, T^3 + T + 1) = 9
+   N = T^4 + 1                psi = 24  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 6
+   N = T^4 + T^3 + 1          psi = 17  C_0(N,0) = 2  C_0(N, T^3 + T^2 + 1) = 5
+   N = T^4 + T^2 + 1          psi = 20  C_0(N,0) = 2  no excess at degree 3
+   N = T^4 + T^3 + T^2 + 1    psi = 27  C_0(N,0) = 0  C_0(N, T^3 + T^2 + 1) = 3
+   N = T^4 + T + 1            psi = 17  C_0(N,0) = 2  no excess at degree 3
+   N = T^4 + T^3 + T + 1      psi = 30  C_0(N,0) = 0  C_0(N, T^3 + T + 1) = 3
+   N = T^4 + T^2 + T + 1      psi = 27  C_0(N,0) = 0  C_0(N, T^3 + T + 1) = 6
+   N = T^4 + T^3 + T^2 + T + 1 psi = 17  C_0(N,0) = 2  C_0(N, T^3 + T + 1) = 5
+   [section D: 2s]
+
+E. Ramified and singular moduli (Sections 4 and 5.5)
+----------------------------------------------------
+   E0. closed forms
+   q = 2: J_c = T * (T + 1)^3;  root valuations of Phi_(T-1)(X, T^(q+2)) at T: {3: 3}
+   q = 3: J_c = (2) * T * (T + 1)^4 * (T + 2)^4;  root valuations of Phi_(T-1)(X, T^(q+2)) at T: {4: 4}
+   q = 4: J_c = T * (T + 1)^5 * (T + y)^5 * (T + y + 1)^5;  root valuations of Phi_(T-1)(X, T^(q+2)) at T: {5: 5}
+   q = 5: J_c = (4) * T * (T + 1)^6 * (T + 2)^6 * (T + 3)^6 * (T + 4)^6;  root valuations of Phi_(T-1)(X, T^(q+2)) at T: {6: 6}
+   q = 9: J_c = (2) * T * (T + 1)^10 * (T + 2)^10 * (T + y)^10 * (T + y + 1)^10 * (T + y + 2)^10 * (T + 2*y)^10 * (T + 2*y + 1)^10 * (T + 2*y + 2)^10;  root valuations of Phi_(T-1)(X, T^(q+2)) at T: {10: 10}
+   E1. J_s = T^2(1+T)^4, q = 3: the table of Section 5.5
+   N = T + 1        psi =  4  C_J(N,0) = 0 | T: C = 4, n_opt = 5/2 | T + 2: C = 0, n_opt = None | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 4, n_opt = 1 | T^2 + 2*T + 2: C = 4, n_opt = 1
+   N = T + 2        psi =  4  C_J(N,0) = 2 | T: C = 4, n_opt = 5/2 | T + 1: C = 4, n_opt = 4 | T^2 + 1: C = 2, n_opt = None | T^2 + T + 2: C = 4, n_opt = 1 | T^2 + 2*T + 2: C = 4, n_opt = 1
+   N = T^2 + T      psi = 16  C_J(N,0) = 0 | T + 2: C = 0, n_opt = None | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 16, n_opt = 1 | T^2 + 2*T + 2: C = 16, n_opt = 1
+   N = T^2 + 2*T + 1 psi = 12  C_J(N,0) = 0 | T: C = 12, n_opt = 5/2 | T + 2: C = 0, n_opt = None | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 12, n_opt = 1 | T^2 + 2*T + 2: C = 12, n_opt = 1
+   N = T^2 + T + 1  psi = 12  C_J(N,0) = 2 | T: C = 12, n_opt = 5/2 | T + 1: C = 12, n_opt = 4 | T^2 + 1: C = 2, n_opt = None | T^2 + T + 2: C = 12, n_opt = 1 | T^2 + 2*T + 2: C = 12, n_opt = 1
+   N = T^2 + 1      psi = 10  C_J(N,0) = 2 | T: C = 10, n_opt = 5/2 | T + 1: C = 10, n_opt = 4 | T + 2: C = 2, n_opt = None | T^2 + T + 2: C = 10, n_opt = 1 | T^2 + 2*T + 2: C = 10, n_opt = 1
+   N = T^2 + 2      psi = 16  C_J(N,0) = 0 | T: C = 16, n_opt = 5/2 | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 16, n_opt = 1 | T^2 + 2*T + 2: C = 16, n_opt = 1
+   N = T^2 + T + 2  psi = 10  C_J(N,0) = 0 | T: C = 10, n_opt = 5/2 | T + 1: C = 10, n_opt = 4 | T + 2: C = 0, n_opt = None | T^2 + 1: C = 0, n_opt = None | T^2 + 2*T + 2: C = 10, n_opt = 1
+   N = T^2 + 2*T + 2 psi = 10  C_J(N,0) = 0 | T: C = 10, n_opt = 5/2 | T + 1: C = 10, n_opt = 4 | T + 2: C = 0, n_opt = None | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 10, n_opt = 1
+   E2. Theorem 4.1 for j-invariants that are not singular moduli
+   q = 2  J = T         N = T + 1        v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T         N = T^2 + T + 1  v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T         N = T^3 + T + 1  v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T^2       N = T + 1        v + 1/e = 7/3  n_opt = 7/3  min v_T(J2 - J) = 7/3
+   q = 2  J = T^2       N = T^2 + T + 1  v + 1/e = 7/3  n_opt = 7/3  min v_T(J2 - J) = 7/3
+   q = 2  J = T^2       N = T^3 + T + 1  v + 1/e = 7/3  n_opt = 7/3  min v_T(J2 - J) = 7/3
+   q = 2  J = T^2 + T   N = T + 1        v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T^2 + T   N = T^2 + T + 1  v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T^2 + T   N = T^3 + T + 1  v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T^4 + T   N = T + 1        v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T^4 + T   N = T^2 + T + 1  v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 2  J = T^4 + T   N = T^3 + T + 1  v + 1/e = 4/3  n_opt = 4/3  min v_T(J2 - J) = 4/3
+   q = 3  J = T         N = T + 1        v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T         N = T + 2        v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T         N = T^2 + 2*T + 1 v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T         N = T^2 + T + 1  v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T         N = T^2 + 1      v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T         N = T^2 + 2      v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T         N = T^2 + T + 2  v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T         N = T^2 + 2*T + 2 v + 1/e = 5/4  n_opt = 5/4  min v_T(J2 - J) = 5/4
+   q = 3  J = T^2       N = T + 1        v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^2       N = T + 2        v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^2       N = T^2 + 2*T + 1 v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^2       N = T^2 + T + 1  v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^2       N = T^2 + 1      v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^2       N = T^2 + 2      v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^2       N = T^2 + T + 2  v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^2       N = T^2 + 2*T + 2 v + 1/e = 5/2  n_opt = 5/2  min v_T(J2 - J) = 5/2
+   q = 3  J = T^3       N = T + 1        v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   q = 3  J = T^3       N = T + 2        v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   q = 3  J = T^3       N = T^2 + 2*T + 1 v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   q = 3  J = T^3       N = T^2 + T + 1  v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   q = 3  J = T^3       N = T^2 + 1      v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   q = 3  J = T^3       N = T^2 + 2      v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   q = 3  J = T^3       N = T^2 + T + 2  v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   q = 3  J = T^3       N = T^2 + 2*T + 2 v + 1/e = 13/4 n_opt = 13/4 min v_T(J2 - J) = 13/4
+   E3. the conductor-T singular modulus J_c, q = 2, 3  (Corollary 4.6)
+   q = 2  N = T + 1        psi =  3  C_J(N,0) = 0 | T: C = 3, n_opt = 4/3 | T^2 + T + 1: C = 0, n_opt = None
+   q = 2  N = T^2 + T + 1  psi =  5  C_J(N,0) = 2 | T: C = 5, n_opt = 4/3 | T + 1: C = 5, n_opt = 3
+   q = 2  N = T^3 + T + 1  psi =  9  C_J(N,0) = 0 | T: C = 9, n_opt = 4/3 | T + 1: C = 9, n_opt = 3 | T^2 + T + 1: C = 0, n_opt = None
+   q = 3  N = T + 1        psi =  4  C_J(N,0) = 0 | T: C = 4, n_opt = 5/4 | T + 2: C = 4, n_opt = 4 | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 0, n_opt = None | T^2 + 2*T + 2: C = 0, n_opt = None
+   q = 3  N = T + 2        psi =  4  C_J(N,0) = 0 | T: C = 4, n_opt = 5/4 | T + 1: C = 4, n_opt = 4 | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 0, n_opt = None | T^2 + 2*T + 2: C = 0, n_opt = None
+   q = 3  N = T^2 + 2*T + 1 psi = 12  C_J(N,0) = 0 | T: C = 12, n_opt = 5/4 | T + 2: C = 12, n_opt = 4 | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 0, n_opt = None | T^2 + 2*T + 2: C = 0, n_opt = None
+   q = 3  N = T^2 + T + 1  psi = 12  C_J(N,0) = 0 | T: C = 12, n_opt = 5/4 | T + 1: C = 12, n_opt = 4 | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 0, n_opt = None | T^2 + 2*T + 2: C = 0, n_opt = None
+   q = 3  N = T^2 + 1      psi = 10  C_J(N,0) = 2 | T: C = 10, n_opt = 5/4 | T + 1: C = 10, n_opt = 4 | T + 2: C = 10, n_opt = 4 | T^2 + T + 2: C = 2, n_opt = None | T^2 + 2*T + 2: C = 2, n_opt = None
+   q = 3  N = T^2 + 2      psi = 16  C_J(N,0) = 0 | T: C = 16, n_opt = 5/4 | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 0, n_opt = None | T^2 + 2*T + 2: C = 0, n_opt = None
+   q = 3  N = T^2 + T + 2  psi = 10  C_J(N,0) = 2 | T: C = 10, n_opt = 5/4 | T + 1: C = 10, n_opt = 4 | T + 2: C = 10, n_opt = 4 | T^2 + 1: C = 2, n_opt = None | T^2 + 2*T + 2: C = 2, n_opt = None
+   q = 3  N = T^2 + 2*T + 2 psi = 10  C_J(N,0) = 2 | T: C = 10, n_opt = 5/4 | T + 1: C = 10, n_opt = 4 | T + 2: C = 10, n_opt = 4 | T^2 + 1: C = 2, n_opt = None | T^2 + T + 2: C = 2, n_opt = None
+   [section E: 6s]
+
+F. External checks (Section 5.1)
+--------------------------------
+   q = 2: Phi_T = Bassa--Beelen closed form: True
+   q = 3: Phi_T = Bassa--Beelen closed form: True
+   q = 4: Phi_T = Bassa--Beelen closed form: True
+   q = 5: Phi_T = Bassa--Beelen closed form: True
+   q = 9: Phi_T = Bassa--Beelen closed form: True
+   Caranay--Greenberg--Scheidler, Example 6.2, N = T + 1: True
+   Caranay--Greenberg--Scheidler, Example 6.2, N = T + 2: True
+   resultant identity for Phi_(T(T+1)), q = 2, as polynomials in T, X, Y: True
+   ... and at 25 of 25 random specializations (T, X, Y) in F_(2^12)
+   [section F: 1s]
+
+========================================================================
+1211 checks passed, 0 failed

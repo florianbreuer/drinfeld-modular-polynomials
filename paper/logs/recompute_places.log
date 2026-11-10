@@ -1,0 +1,35 @@
+
+Independence of the base place and of the chosen root of P
+----------------------------------------------------------
+   q = 2  N = T            place T + 1          (deg 1, root 0)  E = F_2^4      1.3s   identical
+   q = 2  N = T            place T^2 + T + 1    (deg 2, root 0)  E = F_2^6      1.0s   identical
+   q = 2  N = T            place T^2 + T + 1    (deg 2, root 1)  E = F_2^6      0.1s   identical
+   q = 2  N = T            place T^3 + T + 1    (deg 3, root 0)  E = F_2^6      0.1s   identical
+   q = 2  N = T            place T^3 + T + 1    (deg 3, root 1)  E = F_2^6      0.1s   identical
+   q = 2  N = T            place T^3 + T^2 + 1  (deg 3, root 0)  E = F_2^6      0.1s   identical
+   q = 2  N = T            place T^3 + T^2 + 1  (deg 3, root 1)  E = F_2^6      0.1s   identical
+   q = 2  N = T^2 + T + 1  place T              (deg 1, root 0)  E = F_2^6      0.9s   identical
+   q = 2  N = T^2 + T + 1  place T + 1          (deg 1, root 0)  E = F_2^6      1.0s   identical
+   q = 2  N = T^2 + T + 1  place T^3 + T + 1    (deg 3, root 0)  E = F_2^18     1.7s   identical
+   q = 2  N = T^2 + T + 1  place T^3 + T + 1    (deg 3, root 1)  E = F_2^18     1.5s   identical
+   q = 2  N = T^2 + T      place T^2 + T + 1    (deg 2, root 0)  E = F_2^6      2.3s   identical
+   q = 2  N = T^2 + T      place T^2 + T + 1    (deg 2, root 1)  E = F_2^6      2.0s   identical
+   q = 2  N = T^2 + T      place T^3 + T + 1    (deg 3, root 0)  E = F_2^6      2.2s   identical
+   q = 2  N = T^2 + T      place T^3 + T + 1    (deg 3, root 1)  E = F_2^6      2.1s   identical
+   q = 3  N = T + 1        place T              (deg 1, root 0)  E = F_3^4      0.2s   identical
+   q = 3  N = T + 1        place T + 2          (deg 1, root 0)  E = F_3^4      0.2s   identical
+   q = 3  N = T + 1        place T^2 + 1        (deg 2, root 0)  E = F_3^16     1.0s   identical
+   q = 3  N = T + 1        place T^2 + 1        (deg 2, root 1)  E = F_3^16     0.9s   identical
+   q = 3  N = T + 1        place T^3 + 2*T + 1  (deg 3, root 0)  E = F_3^6      0.2s   identical
+   q = 3  N = T + 1        place T^3 + 2*T + 1  (deg 3, root 1)  E = F_3^6      0.2s   identical
+   q = 3  N = T^2 + 1      place T              (deg 1, root 0)  E = F_3^8     13.4s   identical
+   q = 3  N = T^2 + 1      place T + 1          (deg 1, root 0)  E = F_3^16    34.1s   identical
+   q = 4  N = T            place T + 1          (deg 1, root 0)  E = F_2^8      1.3s   identical
+   q = 4  N = T            place T + y          (deg 1, root 0)  E = F_2^12     2.4s   identical
+   q = 9  N = T            place T + 1          (deg 1, root 0)  E = F_3^8     63.8s   identical
+   q = 9  N = T            place T + y          (deg 1, root 0)  E = F_3^16   140.2s   identical
+
+total time 276s
+
+========================================================================
+29 checks passed, 0 failed

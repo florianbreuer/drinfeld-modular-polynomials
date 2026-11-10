@@ -1,0 +1,21 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  sage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-tests, verification of the paper, quick recomputation
+        run: |
+          docker run --rm -v "$PWD":/work -w /work --entrypoint /bin/bash \
+            sagemath/sagemath:latest -c '
+              SAGE=$(command -v sage || echo /home/sage/sage/sage)
+              $SAGE --version &&
+              $SAGE tests/run_tests.py &&
+              $SAGE paper/verify_paper.py &&
+              $SAGE paper/recompute.py quick places'

@@ -1,0 +1,55 @@
+
+Phi_N(X,Y), recomputed with the proven height bound, compared with data/
+------------------------------------------------------------------------
+   q = 2  N = T                      psi =  3  place T + 1         K =   78  E = F_q^4       1.6s   identical to data/
+   q = 2  N = T + 1                  psi =  3  place T             K =   78  E = F_q^4       0.1s   identical to data/
+   q = 2  N = T^2                    psi =  6  place T + 1         K =  151  E = F_q^8       1.5s   identical to data/
+   q = 2  N = T^2 + T                psi =  9  place T^2 + T + 1   K =  128  E = F_q^6       2.5s   identical to data/
+   q = 2  N = T^2 + T + 1            psi =  5  place T             K =  129  E = F_q^6       1.0s   identical to data/
+   q = 2  N = T^3                    psi = 12  place T + 1         K =  306  E = F_q^8      19.1s   identical to data/
+   q = 2  N = T^3 + T + 1            psi =  9  place T             K =  239  E = F_q^14     12.8s   identical to data/
+   q = 3  N = T                      psi =  4  place T + 1         K =  177  E = F_q^4       0.2s   identical to data/
+   q = 3  N = T + 1                  psi =  4  place T + 2         K =  177  E = F_q^4       0.2s   identical to data/
+   q = 3  N = T + 2                  psi =  4  place T             K =  177  E = F_q^4       0.3s   identical to data/
+   q = 3  N = T^2 + T                psi = 16  place T + 2         K =  705  E = F_q^4      25.5s   identical to data/
+   q = 3  N = T^2 + 2*T + 1          psi = 12  place T + 2         K =  548  E = F_q^6      16.8s   identical to data/
+   q = 3  N = T^2 + T + 1            psi = 12  place T             K =  548  E = F_q^6      16.5s   identical to data/
+   q = 3  N = T^2 + 1                psi = 10  place T             K =  469  E = F_q^8      12.0s   identical to data/
+   q = 3  N = T^2 + 2                psi = 16  place T             K =  705  E = F_q^4      26.9s   identical to data/
+   q = 3  N = T^2 + T + 2            psi = 10  place T + 2         K =  469  E = F_q^8      13.0s   identical to data/
+   q = 3  N = T^2 + 2*T + 2          psi = 10  place T + 1         K =  469  E = F_q^8      13.2s   identical to data/
+   q = 4  N = T                      psi =  5  place T + 1         K =  352  E = F_q^4       0.9s   identical to data/
+   q = 5  N = T                      psi =  6  place T + 1         K =  623  E = F_q^4       1.4s   identical to data/
+   q = 9  N = T                      psi = 10  place T + 1         K = 3088  E = F_q^4      54.1s   identical to data/
+
+Phi_N(X,0) for all monic N of degree 3 and 4 over F_2
+-----------------------------------------------------
+   q = 2  N = T^3                    psi = 12  place T + 1         K =  270  E = F_q^8       0.4s   identical to data/
+   q = 2  N = T^3 + T^2              psi = 18  place T^2 + T + 1   K =  199  E = F_q^12      1.4s   identical to data/
+   q = 2  N = T^3 + T                psi = 18  place T^2 + T + 1   K =  199  E = F_q^12      1.3s   identical to data/
+   q = 2  N = T^3 + T^2 + T          psi = 15  place T + 1         K =  327  E = F_q^6       0.5s   identical to data/
+   q = 2  N = T^3 + 1                psi = 15  place T             K =  327  E = F_q^6       0.5s   identical to data/
+   q = 2  N = T^3 + T^2 + 1          psi =  9  place T             K =  212  E = F_q^14      0.6s   identical to data/
+   q = 2  N = T^3 + T + 1            psi =  9  place T             K =  212  E = F_q^14      0.6s   identical to data/
+   q = 2  N = T^3 + T^2 + T + 1      psi = 12  place T             K =  270  E = F_q^8       0.6s   identical to data/
+   q = 2  N = T^4                    psi = 24  place T + 1         K =  561  E = F_q^8       4.0s   identical to data/
+   q = 2  N = T^4 + T^3              psi = 36  place T^2 + T + 1   K =  408  E = F_q^24     19.5s   identical to data/
+   q = 2  N = T^4 + T^2              psi = 36  place T^2 + T + 1   K =  404  E = F_q^12      9.5s   identical to data/
+   q = 2  N = T^4 + T^3 + T^2        psi = 30  place T + 1         K =  673  E = F_q^12      8.7s   identical to data/
+   q = 2  N = T^4 + T                psi = 45  place T^3 + T^2 + 1 K =  335  E = F_q^18     19.0s   identical to data/
+   q = 2  N = T^4 + T^3 + T          psi = 27  place T + 1         K =  626  E = F_q^14     10.6s   identical to data/
+   q = 2  N = T^4 + T^2 + T          psi = 27  place T + 1         K =  626  E = F_q^14      9.9s   identical to data/
+   q = 2  N = T^4 + T^3 + T^2 + T    psi = 36  place T^2 + T + 1   K =  408  E = F_q^24     21.3s   identical to data/
+   q = 2  N = T^4 + 1                psi = 24  place T             K =  561  E = F_q^8       4.3s   identical to data/
+   q = 2  N = T^4 + T^3 + 1          psi = 17  place T + 1         K =  420  E = F_q^10      2.8s   identical to data/
+   q = 2  N = T^4 + T^2 + 1          psi = 20  place T             K =  477  E = F_q^12      4.2s   identical to data/
+   q = 2  N = T^4 + T^3 + T^2 + 1    psi = 27  place T             K =  626  E = F_q^14      9.6s   identical to data/
+   q = 2  N = T^4 + T + 1            psi = 17  place T             K =  420  E = F_q^30      7.0s   identical to data/
+   q = 2  N = T^4 + T^3 + T + 1      psi = 30  place T             K =  673  E = F_q^12      8.6s   identical to data/
+   q = 2  N = T^4 + T^2 + T + 1      psi = 27  place T             K =  626  E = F_q^14     10.7s   identical to data/
+   q = 2  N = T^4 + T^3 + T^2 + T + 1 psi = 17  place T             K =  420  E = F_q^10      3.0s   identical to data/
+
+total time 380s
+
+========================================================================
+44 checks passed, 0 failed
