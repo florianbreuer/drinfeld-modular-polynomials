@@ -101,11 +101,11 @@ def section_A(rep, data):
     lo, hi = min(ratios), max(ratios)
     rep.say("   proven bound / true height: min %.2f (%s), max %.2f (%s)"
             % (float(lo[0]), lo[1], float(hi[0]), hi[1]))
-    rep.check("the bound exceeds the height by a factor between 2.8 and 7.4",
-              abs(float(lo[0]) - 2.8) < 0.05 and abs(float(hi[0]) - 7.4) < 0.05)
+    rep.check("the bound exceeds the height by a factor between 2.3 and 5.9",
+              abs(float(lo[0]) - 2.3) < 0.05 and abs(float(hi[0]) - 5.9) < 0.05)
     N0, Phi0, _ = data[0]
-    rep.check("q = 2, level T: h = 57 and h(Phi_T) = 12",
-              N0 == N0.parent().gen() and height_bound(N0) == 57 and height(Phi0) == 12)
+    rep.check("q = 2, level T: h = 45 and h(Phi_T) = 12",
+              N0 == N0.parent().gen() and height_bound(N0) == 45 and height(Phi0) == 12)
 
     # sigma(Phi_N) = Phi_sigma(N) for the automorphisms sigma : T -> aT + b of A
     count = 0

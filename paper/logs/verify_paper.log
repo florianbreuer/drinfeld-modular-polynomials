@@ -4,27 +4,27 @@ loaded 20 modular polynomials from data/phi
 
 A. The data set: Phi_N(X,Y) for 20 levels (Sections 5 and 5.1)
 --------------------------------------------------------------
-   q = 2  N = T              psi =  3  height   12 <= bound   57  b_q(N) = 2.333 <= B_q = 12.500  Kronecker ok  h = q^2(q+1)
-   q = 2  N = T + 1          psi =  3  height   12 <= bound   57  b_q(N) = 2.333 <= B_q = 12.500  Kronecker ok  h = q^2(q+1)
-   q = 2  N = T^2            psi =  6  height   24 <= bound  121  b_q(N) = 1.667 <= B_q = 12.500
-   q = 2  N = T^2 + T        psi =  9  height   24 <= bound  177  b_q(N) = 1.111 <= B_q = 12.500
-   q = 2  N = T^2 + T + 1    psi =  5  height   24 <= bound  102  b_q(N) = 2.000 <= B_q = 12.500  Kronecker ok
-   q = 2  N = T^3            psi = 12  height   84 <= bound  258  b_q(N) = 2.833 <= B_q = 12.500
-   q = 2  N = T^3 + T + 1    psi =  9  height   72 <= bound  200  b_q(N) = 3.000 <= B_q = 12.500  Kronecker ok
-   q = 3  N = T              psi =  4  height   36 <= bound  149  b_q(N) = 1.750 <= B_q = 8.833  Kronecker ok  h = q^2(q+1)
-   q = 3  N = T + 1          psi =  4  height   36 <= bound  149  b_q(N) = 1.750 <= B_q = 8.833  Kronecker ok  h = q^2(q+1)
-   q = 3  N = T + 2          psi =  4  height   36 <= bound  149  b_q(N) = 1.750 <= B_q = 8.833  Kronecker ok  h = q^2(q+1)
-   q = 3  N = T^2 + T        psi = 16  height  108 <= bound  629  b_q(N) = 0.688 <= B_q = 8.833
-   q = 3  N = T^2 + 2*T + 1  psi = 12  height  108 <= bound  488  b_q(N) = 0.917 <= B_q = 8.833
-   q = 3  N = T^2 + T + 1    psi = 12  height  108 <= bound  488  b_q(N) = 0.917 <= B_q = 8.833
-   q = 3  N = T^2 + 1        psi = 10  height  108 <= bound  417  b_q(N) = 1.100 <= B_q = 8.833  Kronecker ok
-   q = 3  N = T^2 + 2        psi = 16  height  108 <= bound  629  b_q(N) = 0.688 <= B_q = 8.833
-   q = 3  N = T^2 + T + 2    psi = 10  height  108 <= bound  417  b_q(N) = 1.100 <= B_q = 8.833  Kronecker ok
-   q = 3  N = T^2 + 2*T + 2  psi = 10  height  108 <= bound  417  b_q(N) = 1.100 <= B_q = 8.833  Kronecker ok
-   q = 4  N = T              psi =  5  height   80 <= bound  315  b_q(N) = 1.533 <= B_q = 7.806  Kronecker ok  h = q^2(q+1)
-   q = 5  N = T              psi =  6  height  150 <= bound  575  b_q(N) = 1.417 <= B_q = 7.325  Kronecker ok  h = q^2(q+1)
-   q = 9  N = T              psi = 10  height  810 <= bound 2976  b_q(N) = 1.225 <= B_q = 6.642  Kronecker ok  h = q^2(q+1)
-   proven bound / true height: min 2.78 (q = 2, N = T^3 + T + 1), max 7.38 (q = 2, N = T^2 + T)
+   q = 2  N = T              psi =  3  height   12 <= bound   45  b_q(N) = 2.333 <= B_q = 9.833  Kronecker ok  h = q^2(q+1)
+   q = 2  N = T + 1          psi =  3  height   12 <= bound   45  b_q(N) = 2.333 <= B_q = 9.833  Kronecker ok  h = q^2(q+1)
+   q = 2  N = T^2            psi =  6  height   24 <= bound   97  b_q(N) = 1.667 <= B_q = 9.833
+   q = 2  N = T^2 + T        psi =  9  height   24 <= bound  141  b_q(N) = 1.111 <= B_q = 9.833
+   q = 2  N = T^2 + T + 1    psi =  5  height   24 <= bound   82  b_q(N) = 2.000 <= B_q = 9.833  Kronecker ok
+   q = 2  N = T^3            psi = 12  height   84 <= bound  210  b_q(N) = 2.833 <= B_q = 9.833
+   q = 2  N = T^3 + T + 1    psi =  9  height   72 <= bound  164  b_q(N) = 3.000 <= B_q = 9.833  Kronecker ok
+   q = 3  N = T              psi =  4  height   36 <= bound  113  b_q(N) = 1.750 <= B_q = 6.583  Kronecker ok  h = q^2(q+1)
+   q = 3  N = T + 1          psi =  4  height   36 <= bound  113  b_q(N) = 1.750 <= B_q = 6.583  Kronecker ok  h = q^2(q+1)
+   q = 3  N = T + 2          psi =  4  height   36 <= bound  113  b_q(N) = 1.750 <= B_q = 6.583  Kronecker ok  h = q^2(q+1)
+   q = 3  N = T^2 + T        psi = 16  height  108 <= bound  485  b_q(N) = 0.688 <= B_q = 6.583
+   q = 3  N = T^2 + 2*T + 1  psi = 12  height  108 <= bound  380  b_q(N) = 0.917 <= B_q = 6.583
+   q = 3  N = T^2 + T + 1    psi = 12  height  108 <= bound  380  b_q(N) = 0.917 <= B_q = 6.583
+   q = 3  N = T^2 + 1        psi = 10  height  108 <= bound  327  b_q(N) = 1.100 <= B_q = 6.583  Kronecker ok
+   q = 3  N = T^2 + 2        psi = 16  height  108 <= bound  485  b_q(N) = 0.688 <= B_q = 6.583
+   q = 3  N = T^2 + T + 2    psi = 10  height  108 <= bound  327  b_q(N) = 1.100 <= B_q = 6.583  Kronecker ok
+   q = 3  N = T^2 + 2*T + 2  psi = 10  height  108 <= bound  327  b_q(N) = 1.100 <= B_q = 6.583  Kronecker ok
+   q = 4  N = T              psi =  5  height   80 <= bound  235  b_q(N) = 1.533 <= B_q = 5.672  Kronecker ok  h = q^2(q+1)
+   q = 5  N = T              psi =  6  height  150 <= bound  425  b_q(N) = 1.417 <= B_q = 5.242  Kronecker ok  h = q^2(q+1)
+   q = 9  N = T              psi = 10  height  810 <= bound 2166  b_q(N) = 1.225 <= B_q = 4.617  Kronecker ok  h = q^2(q+1)
+   proven bound / true height: min 2.28 (q = 2, N = T^3 + T + 1), max 5.88 (q = 2, N = T^2 + T)
    Phi_sigma(N)(X,Y) = a^(-psi) sigma(Phi_N)(aX, aY) verified for 58 pairs (N, sigma), sigma(T) = aT + b
    [section A: 3s]
 
@@ -219,7 +219,7 @@ E. Ramified and singular moduli (Sections 4 and 5.5)
    q = 3  N = T^2 + 2      psi = 16  C_J(N,0) = 0 | T: C = 16, n_opt = 5/4 | T^2 + 1: C = 0, n_opt = None | T^2 + T + 2: C = 0, n_opt = None | T^2 + 2*T + 2: C = 0, n_opt = None
    q = 3  N = T^2 + T + 2  psi = 10  C_J(N,0) = 2 | T: C = 10, n_opt = 5/4 | T + 1: C = 10, n_opt = 4 | T + 2: C = 10, n_opt = 4 | T^2 + 1: C = 2, n_opt = None | T^2 + 2*T + 2: C = 2, n_opt = None
    q = 3  N = T^2 + 2*T + 2 psi = 10  C_J(N,0) = 2 | T: C = 10, n_opt = 5/4 | T + 1: C = 10, n_opt = 4 | T + 2: C = 10, n_opt = 4 | T^2 + 1: C = 2, n_opt = None | T^2 + T + 2: C = 2, n_opt = None
-   [section E: 6s]
+   [section E: 5s]
 
 F. External checks (Section 5.1)
 --------------------------------
@@ -232,7 +232,7 @@ F. External checks (Section 5.1)
    Caranay--Greenberg--Scheidler, Example 6.2, N = T + 2: True
    resultant identity for Phi_(T(T+1)), q = 2, as polynomials in T, X, Y: True
    ... and at 25 of 25 random specializations (T, X, Y) in F_(2^12)
-   [section F: 1s]
+   [section F: 0s]
 
 ========================================================================
 1211 checks passed, 0 failed

@@ -15,17 +15,22 @@ coefficient) satisfies, by Breuer--Pazuki--Ran [BPR2024, Thm. 1.1],
 .. MATH::
 
     h(\Phi_N) = \frac{q^2-1}{2}\,\psi(N)\,\bigl(\deg N - 2\lambda_N + b_q(N)\bigr),
-    \qquad 0 \le b_q(N) \le B_q := 4 + \frac{2q^3+q^2-2q+1}{q(q-1)^2},
+    \qquad 0 \le b_q(N) \le B_q := 4 + \frac{5q^3-q^2-q+1}{q(q+1)(q-1)^2},
 
 where `\lambda_N = \sum_{P^n \| N} \frac{|P|^n-1}{|P|^{n-1}(|P|^2-1)} \deg P`.
 The upper bound is what makes the output of
 :func:`drinfeld_modpoly.modular_polynomial.drinfeld_modular_polynomial`
 provably exact.
 
+The constant `B_q` is the one of the third arXiv version (v3, November 2026)
+of [BPR2024]; it equals `4 + 1/q + 4q^2/((q-1)^2(q+1))`, e.g. `59/6` for
+`q = 2`.  (Versions 1 and 2 stated larger constants, so bounds computed
+with them remain valid.)
+
 REFERENCES:
 
 - [BPR2024] F. Breuer, F. Pazuki, Z. Ran, *Heights of Drinfeld modular
-  polynomials and Hecke images*, arXiv:2410.11132.
+  polynomials and Hecke images*, arXiv:2410.11132v3.
 """
 from sage.all import QQ, ZZ, floor
 
@@ -79,11 +84,17 @@ def lambda_N(N):
 
 def B_q(q):
     r"""
-    Return the constant `B_q = 4 + \frac{2q^3+q^2-2q+1}{q(q-1)^2}` of
+    Return the constant `B_q = 4 + \frac{5q^3-q^2-q+1}{q(q+1)(q-1)^2}` of
     [BPR2024, Thm. 1.1].
+
+    EXAMPLES::
+
+        sage: from drinfeld_modpoly import B_q
+        sage: B_q(2), B_q(3), B_q(4)
+        (59/6, 79/12, 1021/180)
     """
     q = ZZ(q)
-    return 4 + QQ(2 * q ** 3 + q ** 2 - 2 * q + 1) / (q * (q - 1) ** 2)
+    return 4 + QQ(5 * q ** 3 - q ** 2 - q + 1) / (q * (q + 1) * (q - 1) ** 2)
 
 
 def height_bound(N):
@@ -99,13 +110,13 @@ def height_bound(N):
 
     EXAMPLES:
 
-    At level `T` over `\GF{2}` the bound is 57, while the true height is
+    At level `T` over `\GF{2}` the bound is 45, while the true height is
     `q^2(q+1) = 12`::
 
         sage: from drinfeld_modpoly import height_bound
         sage: A.<T> = GF(2)[]
         sage: height_bound(T)
-        57
+        45
     """
     _, _, q = _check_level(N)
     return ZZ(floor(QQ(q * q - 1) / 2 * psi(N) * (N.degree() - 2 * lambda_N(N) + B_q(q))))

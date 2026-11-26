@@ -40,7 +40,7 @@ same way:
 
 ```python
 sage: A.<T> = GF(9, 'y')[]
-sage: Phi = drinfeld_modular_polynomial(T)            # degree 10, height 810; ~ 1 minute
+sage: Phi = drinfeld_modular_polynomial(T)            # degree 10, height 810; ~ 30 seconds
 sage: A.<T> = GF(2)[]
 sage: Phi = drinfeld_modular_polynomial(T^2 * (T + 1), verbose=True)   # degree 18
 ```
@@ -85,9 +85,11 @@ bound h for the height of Φ_N — the largest T-degree of a coefficient — and
 returns the exact Φ_N as soon as its working precision exceeds an explicit
 function of h (Proposition 5.1 of the paper). The code uses the bound
 
-    h(Φ_N) ≤ (q² − 1)/2 · ψ(N) · (deg N − 2λ_N + B_q)
+    h(Φ_N) ≤ (q² − 1)/2 · ψ(N) · (deg N − 2λ_N + B_q),
+    λ_N = Σ_{P^n ‖ N} (|P|^n − 1)/(|P|^{n−1}(|P|² − 1)) · deg P,
+    B_q = 4 + (5q³ − q² − q + 1)/(q(q + 1)(q − 1)²)      (= 59/6 for q = 2),
 
-proved by Breuer–Pazuki–Ran (arXiv:2410.11132, Thm. 1.1), and 12 digits of
+proved by Breuer–Pazuki–Ran (arXiv:2410.11132v3, Thm. 1.1), and 12 digits of
 precision more than required. On top of that, every run checks that the spare
 digits of every coefficient vanish, that all residues lie in the right subfield,
 that no coefficient exceeds the height bound, and that the result is monic and
@@ -98,8 +100,8 @@ symmetric; any failure raises an `ArithmeticError`.
 ```
 sage tests/run_tests.py              # self-tests of the package                 (~ 30 s)
 sage paper/verify_paper.py           # every numerical claim of the paper        (~ 20 s)
-sage paper/recompute.py all          # recompute all 44 polynomials from scratch (~ 6 min)
-sage paper/recompute.py places-all   # ... and again at other base places        (~ 5 min)
+sage paper/recompute.py all          # recompute all 44 polynomials from scratch (~ 4 min)
+sage paper/recompute.py places-all   # ... and again at other base places        (~ 2 min)
 ```
 
 (`recompute.py quick` and `recompute.py places` are shorter versions of the last
@@ -110,7 +112,7 @@ and checks, section by section:
 
 | | claims | where in the paper |
 |---|---|---|
-| A | the 20 polynomials Φ_N are monic and symmetric, satisfy the Kronecker congruence for prime N, have height below the proven bound (by a factor between 2.8 and 7.4) and equal to q²(q+1) at level T; they are compatible with the automorphisms σ: T ↦ aT + b of A, i.e. Φ_{σ(N)}(X, Y) = a^{−ψ(N)} σ(Φ_N)(aX, aY) (58 pairs (N, σ) within the data set) | §5, §5.1, §4 |
+| A | the 20 polynomials Φ_N are monic and symmetric, satisfy the Kronecker congruence for prime N, have height below the proven bound (by a factor between 2.3 and 5.9) and equal to q²(q+1) at level T; they are compatible with the automorphisms σ: T ↦ aT + b of A, i.e. Φ_{σ(N)}(X, Y) = a^{−ψ(N)} σ(Φ_N)(aX, aY) (58 pairs (N, σ) within the data set) | §5, §5.1, §4 |
 | B | Table 1: all coefficients of Φ_{T²+T+1} for q = 2, in factored form | §5.2 |
 | C | Theorem 1.2(1) at all 44 pairs (N, P) with deg P = 1: C₀(N, P) = ψ(N), the bound holds, and n_opt = q + 1 in every case; the two cases where the lowest coefficient is not a witness; the residues S_C of the kernels, Lemma 3.7, and the formula v_P(j(φ⁰/C)) = (q+1)(1 + v_P(S_C)) | §5.3 |
 | D | primes of degree 2 (ordinary: C₀(N, P) = C₀(N, 0)) and of degree 3; Φ_N(X, 0) for all 24 levels of degree 3 and 4 over F₂: supersingular excess at 20 of them, always a multiple of q + 1, with an independent recount of C₀(N, P) in characteristic P (42 cases); Theorem 1.2(2) at the excess prime of Φ_{T³} | §5.4 |
@@ -166,28 +168,28 @@ Timings with SageMath 9.3 on a laptop:
 
 | q | N | ψ(N) | place | precision K | E | time |
 |---|---|---|---|---|---|---|
-| 2 | T²+T+1 | 5 | T | 129 | F_{2^6} | 1 s |
-| 2 | T(T+1) | 9 | T²+T+1 | 128 | F_{2^6} | 3 s |
-| 2 | T³ | 12 | T+1 | 306 | F_{2^8} | 15–20 s |
-| 3 | T²+1 | 10 | T | 469 | F_{3^8} | 10 s |
-| 3 | T(T+1) | 16 | T+2 | 705 | F_{3^4} | 20–25 s |
-| 4 | T | 5 | T+1 | 352 | F_{2^8} | 1 s |
-| 5 | T | 6 | T+1 | 623 | F_{5^4} | 1.5 s |
-| 9 | T | 10 | T+1 | 3088 | F_{3^8} | 35–70 s |
+| 2 | T²+T+1 | 5 | T | 109 | F_{2^6} | 0.5 s |
+| 2 | T(T+1) | 9 | T²+T+1 | 110 | F_{2^6} | 2 s |
+| 2 | T³ | 12 | T+1 | 258 | F_{2^8} | 10 s |
+| 3 | T²+1 | 10 | T | 379 | F_{3^8} | 8 s |
+| 3 | T(T+1) | 16 | T+2 | 561 | F_{3^4} | 15 s |
+| 4 | T | 5 | T+1 | 272 | F_{2^8} | 0.5 s |
+| 5 | T | 6 | T+1 | 473 | F_{5^4} | 1 s |
+| 9 | T | 10 | T+1 | 2278 | F_{3^8} | 25 s |
 
 The complete list is in `paper/logs/recompute_all.log`. Each Φ_N(X, 0) for N of
-degree 3 or 4 over F₂ (ψ(N) up to 45) takes between half a second and 20 seconds.
+degree 3 or 4 over F₂ (ψ(N) up to 45) takes between 0.3 and 12 seconds.
 Some examples beyond the data set of the paper (y denotes a generator of F_q):
 
 | q | N | ψ(N) | place | precision K | E | time |
 |---|---|---|---|---|---|---|
-| 7 | T | 8 | T+1 | 1538 | F_{7^4} | 12 s |
-| 8 | T | 9 | T+1 | 2223 | F_{2^12} | 50 s |
-| 8 | T+y | 9 | T+y+1 | 2223 | F_{2^12} | 50 s |
-| 2 | T²(T+1) | 18 | T²+T+1 | 253 | F_{2^12} | 1 min |
-| 2 | T⁴+T+1 | 17 | T | 471 | F_{2^30} | 3 min |
-| 4 | T²+yT+1 | 17 | T | 1317 | F_{2^20} | 5 min |
-| 5 | T²+2 | 26 | T+2 | 3029 | F_{5^6} | 9 min |
+| 7 | T | 8 | T+1 | 1146 | F_{7^4} | 7 s |
+| 8 | T | 9 | T+1 | 1647 | F_{2^12} | 30 s |
+| 8 | T+y | 9 | T+y+1 | 1647 | F_{2^12} | 26 s |
+| 2 | T²(T+1) | 18 | T²+T+1 | 217 | F_{2^12} | 40 s |
+| 2 | T⁴+T+1 | 17 | T | 403 | F_{2^30} | 3 min |
+| 4 | T²+yT+1 | 17 | T | 1045 | F_{2^20} | 3 min |
+| 5 | T²+2 | 26 | T+2 | 2379 | F_{5^6} | 6 min |
 
 The cost of the full Φ_N grows roughly like ψ(N)³ multiplications of power series
 of length K ≈ h/d_P + (q+1)ψ(N) over E.

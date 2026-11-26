@@ -488,7 +488,7 @@ def drinfeld_modular_polynomial(N, place=None, names=('X', 'Y'), h=None,
 
         sage: Phi, cert = drinfeld_modular_polynomial(T, certificate=True)
         sage: cert["place"], cert["height_bound"], cert["precision"]
-        (T + 1, 57, 78)
+        (T + 1, 45, 66)
 
     Non-prime fields and composite levels are fine::
 
